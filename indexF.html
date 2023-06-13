@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="estilo.css">
+    <title>Jogo da Forca - Daffy Duck</title>
+</head>
+
+<body onload="sorteia()">
+
+    <!--header-->
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+
+        <a href="#" class="logo">Hogwarts<span> Mystery</span></a>
+
+        <nav class="navbar">
+            <a href="index1.html">Home</a>
+            <a href="#">Sobre Nós</a>
+            <a href="#">Serviços</a>
+        </nav>
+
+
+        <div class="icons">
+            <a href="" class="fas fa-heart"></a>
+            <a href="" class="fas fa-shopping-cart"></a>
+            <a href="" class="fas fa-user"></a>
+        </div>
+    </header>
+
+    <!--todo o conteúdo da página-->
+
+<section>
+
+    <div class="conteudo">
+
+        <!--tabela de pontuação de acertos e erros-->
+        <div id="tabelaDiv">
+            <div class="caixa">
+
+            <table border="0" id="tabela" align="center">
+                <tr>
+                    <td id="tabAcerto">
+                    <div class="caixa2">
+                        <div id="acerto">Acertos: 0</div><br>
+                        <div id="palavrascerta">Palavras Certas: 0<br>Palavras Erradas: 0</div><br>
+                    </div>
+                    </td>
+                    <td>
+                        <div id="forca" class="anima">
+                            <img src="imagem/forca1.png" id="imagem" alt="" width="441" height="412">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            
+        </div>
+
+            <table border="0" id="tabela" align="center">
+                <tr>
+                    <td>
+                        <br>
+                        <div id="tema">TEMA: FRUTA</div>
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="tentativa">
+                            <form action="" id="tenta"></form>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <br>
+
+            <!-- tabela que contem todas as letras do alfabeto para o jogador escolher -->
+            <table border="0" id="tabela" align="center" class="tabela">
+                <tr>
+                    <td>
+                        <div id="letras" align="center">
+                            <p>
+                                <button type="button" id="Q" onmousedown="confere('Q')" onmouseup="acabou()">Q</button>
+                                <button type="button" id="W" onmousedown="confere('W')" onmouseup="acabou()">W</button>
+                                <button type="button" id="E" onmousedown="confere('E')" onmouseup="acabou()">E</button>
+                                <button type="button" id="R" onmousedown="confere('R')" onmouseup="acabou()">R</button>
+                                <button type="button" id="T" onmousedown="confere('T')" onmouseup="acabou()">T</button>
+                                <button type="button" id="Y" onmousedown="confere('Y')" onmouseup="acabou()">Y</button>
+                                <button type="button" id="U" onmousedown="confere('U')" onmouseup="acabou()">U</button>
+                                <button type="button" id="I" onmousedown="confere('I')" onmouseup="acabou()">I</button>
+                                <button type="button" id="O" onmousedown="confere('O')" onmouseup="acabou()">O</button>
+                                <button type="button" id="P" onmousedown="confere('P')" onmouseup="acabou()">P</button>
+                                <br><br>
+                                <button type="button" id="A" onmousedown="confere('A')" onmouseup="acabou()">A</button>
+                                <button type="button" id="S" onmousedown="confere('S')" onmouseup="acabou()">S</button>
+                                <button type="button" id="D" onmousedown="confere('D')" onmouseup="acabou()">D</button>
+                                <button type="button" id="F" onmousedown="confere('F')" onmouseup="acabou()">F</button>
+                                <button type="button" id="G" onmousedown="confere('G')" onmouseup="acabou()">G</button>
+                                <button type="button" id="H" onmousedown="confere('H')" onmouseup="acabou()">H</button>
+                                <button type="button" id="J" onmousedown="confere('J')" onmouseup="acabou()">J</button>
+                                <button type="button" id="K" onmousedown="confere('K')" onmouseup="acabou()">K</button>
+                                <button type="button" id="L" onmousedown="confere('L')" onmouseup="acabou()">L</button>
+                                <button type="button" id="Ç" onmousedown="confere('Ç')" onmouseup="acabou()">Ç</button>
+                                <br><br>
+                                <button type="button" id="Z" onmousedown="confere('Z')" onmouseup="acabou()">Z</button>
+                                <button type="button" id="X" onmousedown="confere('X')" onmouseup="acabou()">X</button>
+                                <button type="button" id="C" onmousedown="confere('C')" onmouseup="acabou()">C</button>
+                                <button type="button" id="V" onmousedown="confere('V')" onmouseup="acabou()">V</button>
+                                <button type="button" id="B" onmousedown="confere('B')" onmouseup="acabou()">B</button>
+                                <button type="button" id="N" onmousedown="confere('N')" onmouseup="acabou()">N</button>
+                                <button type="button" id="M" onmousedown="confere('M')" onmouseup="acabou()">M</button>
+                                <button type="button" id="-" onmousedown="confere('-')" onmouseup="acabou()">-</button>
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+    <!--script-->
+    <script src="script3.js"></script>
+
+
+
+
+   
+
+
+
+</body>
+
+</html>

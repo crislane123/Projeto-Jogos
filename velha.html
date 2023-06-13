@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styleV.css">
+    <title>Jogo Da Velha - Minnie&Mickey</title>
+</head>
+ <!-- Ao iniciar o html, ele executa a função recomeça() -->
+<body onload="recomeca()">
+
+
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+
+
+        <a href="" class="logo">Hogwarts<span> Mystery</span></a>
+
+        <nav class="navbar">
+            <a href="index1.html">Home</a>
+            <a href="#">Sobre Nós</a>
+            <a href="#">Serviços</a>
+        </nav>
+
+
+        <div class="icons">
+            <a href="" class="fas fa-heart"></a>
+            <a href="" class="fas fa-shopping-cart"></a>
+            <a href="" class="fas fa-user"></a>
+        </div>
+    </header>
+
+
+<section>
+
+<div class="tudo">
+
+    <div id="jogo">
+        <div class="linha">
+            <div class="casa" id="casa0" onclick="verifica(0)">
+                <img src="./img/HARRY (1).png" id="img0"/>
+            </div>
+
+            <div class="casa" id="casa1" onclick="verifica(1)">
+                <img src="./img/RONY (1).png" id="img1"/>
+            </div>
+
+            <div class="casa" id="casa2" onclick="verifica(2)">
+                <img src="./img/HARRY (1).png" id="img2"/>
+            </div>
+        </div>
+        <div class="linha">
+            <div class="casa" id="casa3" onclick="verifica(3)">
+                <img src="./img/RONY (1).png" id="img3"/>
+            </div>
+
+            <div class="casa" id="casa4" onclick="verifica(4)">
+                <img src="./img/HARRY (1).png" id="img4"/>
+            </div>
+
+            <div class="casa" id="casa5" onclick="verifica(5)">
+                <img src="./img/RONY (1).png" id="img5"/>
+            </div>
+        </div>
+        <div class="linha">
+            <div class="casa" id="casa6" onclick="verifica(6)">
+                <img src="./img/HARRY (1).png" id="img6"/>
+            </div>
+
+            <div class="casa" id="casa7" onclick="verifica(7)">
+                <img src="./img/RONY (1).png" id="img7"/>
+            </div>
+
+            <div class="casa" id="casa8" onclick="verifica(8)">
+                <img src="./img/HARRY (1).png" id="img8"/>
+            </div>
+        </div>
+</div>
+
+<div class="painel">
+
+  <div id="resultado">
+    <p id="resposta">Resultado: </p>
+    <p class="oii">-----------------------------------</p>
+    <br>
+    <p id="MINNIE" class="MINNIE">Pontos Harry: 0 </p>
+    <p id="MICKEY" class="MICKEY">Pontos Rony: 0 </p>
+    <p id="velha" class="velha">Velha...: 0 </p>
+    <br><br><br>
+    <form>
+     <input type="button" id="btnNovo" value="NOVO JOGO" onclick="recomeca()"/>
+    </form>
+  </div>
+
+</div>
+
+</section>
+
+<script src="script2.js"></script>
+
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,278 @@
+
+/* HEADER */
+
+:root{
+    --pink: yellow;
+}
+
+body{
+    background: -webkit-linear-gradient(to right, #000000, #f8df0085);
+    background: linear-gradient(to right, #000000, #f8df0081);
+    height: 100vh;
+    display: flex;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    letter-spacing: 0;
+    scroll-behavior: smooth;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+    margin: 2rem 0;
+    background: rgba(136, 62, 1, 0.945);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.heading span{
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p {
+    color: #eee;
+    font-size: 30px;
+}
+
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: rgb(180, 81, 0);
+    color: #fff;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.btn:hover{
+    background-color:rgb(231, 85, 0);
+}
+
+header{
+    position: fixed;
+    top:0; left: 0; right: 0;
+    background: black;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .8rem 3rem rgb(245, 236, 119);
+}
+
+header .logo{
+    font-size: 3rem;
+    color: white;
+    font-weight: bolder;
+}
+
+header .logo span{
+    color: var(--pink);
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding:0 1.5rem;
+    color: white;
+}
+
+header .navbar a:hover{
+    color: rgb(231, 85, 0);
+}
+
+header .icons a{
+    font-size: 3rem;
+    color: white;
+    margin-left: 1.5rem;
+}
+
+header .icons a:hover{
+    color: rgb(231, 85, 0);
+}
+
+header #toggler{
+    display: none;
+}
+
+header .fa-bars{
+    font-size: 3rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0, 0, 0, 1);
+    display: none;
+}
+
+
+@media (max-width: 991px) {
+
+    html{
+        font-size: 55%;
+        
+    }
+
+    header{
+        padding: 2rem;
+    }
+
+    section{
+        padding: 2rem;
+    }
+
+    .home{
+        background-position: left;
+    }
+}
+
+@media (max-width: 768px) {
+
+    header .fa-bars{
+        display: block;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #eee;
+        border-top: .1rem solid rgba(0, 0, 0, 1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        background-color: black;
+    }
+
+    header #toggler:checked ~.navbar{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        background-color: black;
+
+    }
+
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border:.1rem solid white;
+        display: block;
+        background-color: black;
+
+}
+
+.home .content h3{
+    font-size: 5rem;
+}
+
+.home .content span{
+    font-size: 2.5rem;
+}
+
+@media (max-width: 450px) {
+
+    html{
+        font-size: 50%;
+    }
+
+    .heading{
+        font-size: 3rem;
+    }
+
+}
+}
+
+
+
+
+
+
+
+
+.memory-game {
+    height: 640px;
+    width: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    margin-top: 10%;
+}
+
+.card {
+    height: calc(33.333% - 10px);
+    width: calc(25% - 10px);
+    margin: 5px;
+    position: relative;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+    cursor: pointer;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .9s;
+}
+
+.card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+.card-front{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: white;
+    backface-visibility: hidden;
+    border: 3px solid rgb(202, 172, 0);
+}
+
+.card-back {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    backface-visibility: hidden;
+    background: black;
+    border: 3px solid rgb(202, 172, 0);
+}
+
+.card-front {
+    transform: rotateY(180deg);
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
